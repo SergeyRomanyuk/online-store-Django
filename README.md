@@ -1,2 +1,13 @@
 # online-store-Django
-Проект интернет-магазина с каталогом продуктов и корзиной/ Online store project with a product catalog and a shopping cart
+Проект интернет-магазина с каталогом продуктов и корзиной. 
+Созданы основные разделы сайта с соответствующими моделями для редактирования в режиме администратора. Созданы шаблоны всех разделов с использованием стилей.
+Каталог продуктов с подразделами также доступен для редактирования из администратора (добавление товара, редактирование существующего).
+Корзина для покупок реализована с использованием сессии. Позволяет пользователям выбирать нужные продукты и временно хранить их во время просмотра сайта до тех пор, пока не будет размещен заказ. Корзина сохраняется в сессии с использованием Django session framework, чтобы элементы корзины хранились во время визита пользователя.  Оформление заказа происходит посредством заполнения формы обратной связи. Заявки доступны в режиме админа в соответствующем разделе. Также возможна рассылка уведомлений о получении заказа на эл. почту путем создания асинхронной задачи с использованием Celery в сязке с message broker-ом RabbitMQ.
+Реализован раздел «Обратная связь», в котором можно заполнить форму, указав например желаемый товар, которого нет в каталоге. Заявки сохраняются в панели администратора в соответствующем разделе (возможно добавление отправки на эл. почту).
+___________________________________________________________________________________________________________________________________________________________________
+
+An online store project with a product catalog and a shopping cart.
+Created the main sections of the site with the appropriate models for editing in administrator mode. Created templates for all sections using styles.
+The product catalog with subsections is also available for editing from the administrator (adding a product, editing an existing one).
+The shopping cart is implemented using a session. Allows users to select desired products and temporarily store them while browsing the site until an order is placed. The cart is persisted in the session using the Django session framework so that the cart items are stored during the user's visit. An order is placed by filling out a feedback form. Applications are available in admin mode in the appropriate section. It is also possible to send notifications of receipt of the order by e-mail by creating an asynchronous task using Celery in conjunction with a RabbitMQ message broker.
+The "Feedback" section has been implemented, in which you can fill out a form, indicating, for example, the desired product that is not in the catalog. Applications are saved in the admin panel in the appropriate section (it is possible to add sending to e-mail).
