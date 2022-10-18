@@ -1,0 +1,58 @@
+{% extends 'web/main.html' %}
+{% load static %}
+{% block title_page %}
+	<title>Каталог RASTEH.BY</title>
+{% endblock title_page %}
+{%block content%}
+	<section class="main-section paddind" id="Portfolio">
+		<!--main-section-start-->
+		<div class="container">
+			<h2>Каталог</h2>
+
+			<div class="portfolioFilter">
+				<ul class="Portfolio-nav wow fadeIn delay-02s">
+					<li><a href="#" data-filter="*" class="current">Все категории</a></li>
+					<li><a href="#" data-filter=".branding">Клеи</a></li>
+					<li><a href="#" data-filter=".webdesign">Фрезы</a></li>
+					<li><a href="#" data-filter=".printdesign">Дисковые пилы</a></li>
+					<li><a href="#" data-filter=".photography">Сверла, ножи, патроны</a></li>
+				</ul>
+			</div>
+
+		</div>
+		<div class="portfolioContainer wow fadeInUp delay-04s">
+			{% for post in pr %}
+				{% if post.availability %}
+					{% if post.group == 'Дисковые пилы' %}
+
+						<div class=" Portfolio-box printdesign"> <!--дисковые пилы-->
+							<a href="img/Portfolio-pic1.jpg"><img src="{{ post.img.url }}" alt=""></a>
+							<h3>{{post.name}}</h3>
+							<p>Цена: {{post.price}} руб.</p>
+						</div>
+					{% elif post.group == 'Фрезы' %}
+						<div class="Portfolio-box webdesign"> <!--фрезы-->
+							<a href="img/Portfolio-pic2.jpg"><img src="{{ post.img.url }}" alt=""></a>
+							<h3>{{post.name}}</h3>
+							<p>Цена: {{post.price}} руб.</p>
+						</div>
+					{% elif post.group == 'Клеи' %}
+						<div class=" Portfolio-box branding"> <!--клеи-->
+							<a href="img/Portfolio-pic3.jpg"><img src="{{ post.img.url }}" alt=""></a>
+							<h3>{{post.name}}</h3>
+							<p>Цена: {{post.price}} руб.</p>
+						</div>
+					{% elif post.group == 'Сверла, ножи, патроны' %}
+						<div class=" Portfolio-box photography"> <!--сверла, ножи-->
+							<a href="img/Portfolio-pic4.jpg"><img src="{{ post.img.url }}" alt=""></a>
+							<h3>{{post.name}}</h3>
+							<p>Цена: {{post.price}} руб.</p>
+						</div>
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+
+		</div>
+	</section>
+{%endblock content%}
+	<!--main-section-end-->

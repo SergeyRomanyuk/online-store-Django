@@ -1,0 +1,48 @@
+{% extends 'web/main.html' %}
+{% load static %}
+{% block title_page %}
+	<title>Доставка RASTEH.BY</title>
+{% endblock title_page %}
+{%block content%}
+	<section class="main-section paddind" id="Portfolio">
+		<h2>Условия доставки и оплаты</h2>
+		<div class="service-list-col2">
+			{% for post in dv %}
+
+				<div class="container">
+					<p class="text-indent:50px">{{post.info}}</p>
+				</div>
+
+				<figure class="col-lg-8 col-sm-10  text-right wow fadeInUp delay-02s">
+					<img src="{% static 'img/footer-logo.png' %}" alt="">
+					<img src="{{ post.img2.url }}" alt="">
+				</figure>
+		</div>
+			{% endfor %}
+	</section>
+
+<div class="container">
+		<section class="main-section contact" id="contact">
+			<div class="row">
+				<div class="col-lg-6 col-sm-7 wow fadeInLeft">
+					<div class="contact-info-box address clearfix">
+						<h3><i class=" icon-map-marker"></i>Адрес:</h3>
+						<span>г. Минск, ул. Монтажников, д.2</span>
+					</div>
+					<div class="contact-info-box phone clearfix">
+						<h3><i class="fa fa-phone"></i>Тел:</h3>
+						<span>+375(29)821-49-57</span>
+					</div>
+					<div class="contact-info-box email clearfix">
+						<h3><i class="fa fa-pencil"></i>email:</h3>
+						<span>info@rasteh.by</span>
+					</div>
+					<div class="contact-info-box hours clearfix">
+						<h3><i class="fa fa-clock-o"></i>Время работы:</h3>
+						<span><strong>Пн - Птн:</strong> 9.00 - 17.00<br><strong>Сб - Вск:</strong> Выходной</span>
+					</div>
+				</div>
+			</div>
+		</section>
+</div>
+{%endblock content%}

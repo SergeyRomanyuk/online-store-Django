@@ -1,0 +1,31 @@
+{% extends 'web/main.html' %}
+{% load static %}
+{% block title_page %}
+    <title>{% if category %}{{ category.title }}{% else %}Товар{% endif %}</title>
+{% endblock title_page %}
+{% block content %}
+
+    <div class="container">
+        <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
+        <figure class="col-lg-3 col-sm-10  text-left wow fadeInUp delay-02s">
+            <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+        </figure>
+        <div class="container">
+            <div class="form">
+                <form action="{% url 'cart_add' product.id %}" method="post">
+                    {{ cart_product_form }}
+                    {% csrf_token %}
+                    <p3><h3><input type="submit" value="Добавить в корзину"></h3></p3><br>
+                </form>
+            </div>
+        </div>
+        <div class="portfolioContainer wow fadeInUp delay-04s">
+            <h3>Цена: {{ product.price }} Руб.</h3>
+        </div>
+            <h1>{{ product.name }}</h1>
+
+
+        {{ product.description|linebreaks }}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,83 @@
+
+
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	{% block title_page %}
+    <title>Каталог RASTEH.BY</title>
+	{% endblock %}
+    {% load static %}
+
+	<link rel="shortcut icon" href="{%static 'img/favicon.ico' %}" />
+
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600' rel='stylesheet' type='text/css'>
+
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'css/responsive.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css">
+
+	<script type="text/javascript" src="{% static 'js/jquery.1.8.3.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery-scrolltofixed.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.isotope.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/wow.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/classie.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/magnific-popup.js' %}"></script>
+	<script src="{% static 'contactform/contactform.js' %}"></script>
+</head>
+<body>
+	<nav class="main-nav-outer" id="test">
+		<!--main-nav-start-->
+		<div class="container">
+			<ul class="main-nav">
+				<li class="small-logo"><a href="#header"><img src="{% static 'img/small-logo.png' %}" alt=""></a></li>
+				<li><a href="{% url 'home' %}">Главная</a></li>
+				<li><a href="{% url 'product_list' %}">Каталог</a></li>
+
+				<li><a href="{% url 'delivery' %}">Доставка</a></li>
+				<li><a href="{% url 'contact_page' %}">Оставить заявку</a></li>
+				<li><a href="{% url 'contact' %}">Контакты</a></li>
+			</ul>
+
+		</div>
+	</nav>
+	{% block content %}
+	{% endblock content %}
+
+<div class="container">
+<!--        <h3>Категории</h3>-->
+        <div class="portfolioFilter">
+            <ul class="Portfolio-nav wow fadeIn delay-02s">
+                <li {% if not category %}class="current"{% endif %}>
+                    <a href="{% url 'product_list' %}">Все товары</a>
+                </li>
+                {% for c in categories %}
+                    <li {% if category.slug == c.slug %}class="current"{% endif %}>
+                        <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+</div>
+    <div class="portfolioContainer wow fadeInUp delay-04s
+
+			<div class="Portfolio-nav wow fadeIn delay-02s">
+				<h2>{% if category %}{{ category.name }}{% else %}Все товары{% endif %}</h2>
+				{% for product in products %}
+					<div class="Portfolio-box branding">
+						<a href="{{ product.get_absolute_url }}">
+							<img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+						</a> <br>
+						<a href="{{ product.get_absolute_url }}">{{ product.name }}</a><br>
+						Цена: {{ product.price }} руб.
+					</div>
+				{% endfor %}
+
+    		</div>
+	</div>

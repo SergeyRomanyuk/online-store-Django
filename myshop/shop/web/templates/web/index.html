@@ -1,0 +1,145 @@
+{% extends 'web/main.html' %}
+{% load static %}
+{% block title_page %}
+	<title>RASTEH.BY - все для деревообработки</title>
+{% endblock title_page %}
+{% block content %}
+	<header class="header" id="header">
+		<!--header-start-->
+		<div class="container">
+			<figure class="col-lg-4 col-sm-10  text-right wow fadeInUp delay-02s">
+				<a href="#"><img src="{% static 'img/logo.png' %}" alt=""></a>
+			</figure>
+			<h1 class="animated fadeInDown delay-07s">RASTEH.BY</h1>
+			<h1 class="animated fadeInDown delay-07s">Всё для деревообработки и мебельных производств.</h1>
+			<a class="link animated fadeInUp delay-1s servicelink" href="{% url 'product_list' %}">Каталог</a>
+		</div>
+	</header>
+	<!--header-end-->
+
+
+	<section class="main-section" id="service">
+		<!--main-section-start-->
+		<div class="container">
+			<h2>Категории</h2>
+			<h6>Всё для вашей мастерской или производства</h6>
+			<div class="row">
+				<div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
+					<div class="service-list">
+
+						<div class="service-list-col2">
+							<h3>Клеи</h3>
+							<p>Большой выбор клеев для различных целей</p>
+						</div>
+					</div>
+					<div class="service-list">
+
+						<div class="service-list-col2">
+							<h3>Фрезы</h3>
+							<p>Различные концевые и насадные фрезы</p>
+						</div>
+					</div>
+					<div class="service-list">
+
+						<div class="service-list-col2">
+							<h3>Дисковые пилы</h3>
+							<p>Пилы для продольного и торцевого реза</p>
+						</div>
+					</div>
+					<div class="service-list">
+
+						<div class="service-list-col2">
+							<h3>Сверла, ножи, патроны и др.</h3>
+							<p>Различный инструмент и комплектующие</p>
+						</div>
+					</div>
+				</div>
+				<figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
+					<img src="{% static 'img/macbook-pro.png' %}" alt="">
+				</figure>
+
+			</div>
+		</div>
+	</section>
+
+		<div class="container">
+			<div class="row">
+				<figure class="col-lg-5 col-sm-4 wow fadeInLeft">
+					<img src="{% static 'img/iphone.png' %}" alt="">
+				</figure>
+				<div class="col-lg-7 col-sm-8 featured-work">
+					<h2>Наши приемущества</h2>
+					<P class="padding-b">Мы ищем индивидуальный подход к каждому клиенту, чтобы у вас остались только положительные эмоции от совершения выгодной покупки.</P>
+					<div class="featured-box">
+						<div class="featured-box-col1 wow fadeInRight delay-02s">
+							<i class="fa fa-magic"></i>
+						</div>
+						<div class="featured-box-col2 wow fadeInRight delay-02s">
+							<h3>Доставка по всей стране</h3>
+							<p>Доставка по Беларуси осуществляется курьерами логистической компании (в течение 1-3 дней). </p>
+						</div>
+					</div>
+					<div class="featured-box">
+						<div class="featured-box-col1 wow fadeInRight delay-04s">
+							<i class="fa fa-gift"></i>
+						</div>
+						<div class="featured-box-col2 wow fadeInRight delay-04s">
+							<h3>Скидки постоянным клиентам</h3>
+							<p>При постоянном и долговременном сотрудничестве всегда идем на встречу. </p>
+						</div>
+					</div>
+					<div class="featured-box">
+						<div class="featured-box-col1 wow fadeInRight delay-06s">
+							<i class="fa fa-dashboard"></i>
+						</div>
+						<div class="featured-box-col2 wow fadeInRight delay-06s">
+							<h3>Консультирование</h3>
+							<p>Поможем определиться с покупкой отвечающей вашим запросам </p>
+						</div>
+					</div>
+					<a class="Learn-More" href="#">Learn More</a>
+				</div>
+			</div>
+		</div>
+
+	<div class="container">
+		<section class="container">
+
+			<div class="row">
+				<div class="col-lg-6 col-sm-7 wow fadeInLeft">
+					<div class="contact-info-box address clearfix">
+						<h3><i class=" icon-map-marker"></i>Адрес:</h3>
+						<span>г. Минск, ул. Монтажников, д.2</span>
+					</div>
+					<div class="contact-info-box phone clearfix">
+						<h3><i class="fa fa-phone"></i>Тел:</h3>
+						<span>+375(29)821-49-57</span>
+					</div>
+					<div class="contact-info-box email clearfix">
+						<h3><i class="fa fa-pencil"></i>email:</h3>
+						<span>info@rasteh.by</span>
+					</div>
+					<div class="contact-info-box hours clearfix">
+						<h3><i class="fa fa-clock-o"></i>Время работы:</h3>
+						<span><strong>Пн - Птн:</strong> 9.00 - 17.00<br><strong>Сб - Вск:</strong> Выходной</span>
+					</div>
+
+				<div class="col-lg-8 col-sm-7 wow fadeInRight animated">
+
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-logo"><a href="#"><img src="{% static 'img/footer-logo.png' %}" alt=""></a></div>
+
+
+		</div>
+	</footer>
+
+
+
+{% endblock content %}
+

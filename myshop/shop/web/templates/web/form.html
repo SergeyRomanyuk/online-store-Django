@@ -1,0 +1,43 @@
+{% extends 'web/main.html' %}
+{% load static %}
+{% block title_page %}
+	<title>Заявка RASTEH.BY</title>
+{% endblock title_page %}
+{%block content%}
+<section class="main-section paddind" id="Portfolio">
+  <h2>Оставьте заявку:</h2>
+  <div class="container">
+    <div class="animated fadeInDown delay-05s">
+      <p>Здесь вы можете оставить заявку на интересующую Вас продукцию, которой нет в нашем каталоге.</p>
+    </div>
+
+
+    <div class="form">
+
+      <div id="sendmessage">Ваше сообщение отправлено. Спасибо!</div>
+      <div id="Ошибка сообщения"></div>
+      <form action="" method="post" role="form" class="contactForm">
+        <div class="form-group">
+          <input type="text" name="name" class="form-control input-text" id="name" placeholder="Ваше имя" data-rule="minlen:4" data-msg="Пожалуйста введите не меньше 4х букв" />
+          <div class="validation"></div>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control input-text" name="email" id="email" placeholder="Ваш Email" data-rule="email" data-msg="Пожалуйста введите рабочую почту" />
+          <div class="validation"></div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control input-text" name="subject" id="subject" placeholder="Ваш номер телефона" data-rule="minlen:4" data-msg="Пожалуйста введите не меньше 8 цифр" />
+          <div class="validation"></div>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control input-text text-area" name="message" rows="5" data-rule="required" data-msg="Напишите пожалуйста что-нибудь для нас" placeholder="Сообщение"></textarea>
+          <div class="validation"></div>
+        </div>
+
+        <div class="text-center"><button type="submit" class="input-btn">Оставить заявку</button></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+{%endblock content%}

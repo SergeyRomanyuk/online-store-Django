@@ -1,0 +1,31 @@
+{% extends 'web/main.html' %}
+{% load static %}
+{% block title_page %}
+	<title>Контакты RASTEH.BY</title>
+{% endblock title_page %}
+{%block content%}
+
+<section class="main-section paddind" id="Portfolio">
+	<h2>Для связи с нами:</h2>
+	<div class="row">
+		<div class="service-list">
+			{% for post in cont %}
+			<div class="container">
+				<p>{{post.adres}}</p>
+				<p>{{post.email}}</p>
+				<img src="{{ post.insta.url }}" alt="">
+				<p>{{post.vremia}}</p>
+				<img src="{{ post.map.url }}" alt="">
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+
+{%endblock content%}
+
+
+
+
+
