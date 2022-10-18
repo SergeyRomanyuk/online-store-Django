@@ -1,0 +1,57 @@
+{% extends 'web/main.html' %}
+{% load static %}
+{% block title_page %}
+	<title>Ваша Корзина RASTEH.BY</title>
+{% endblock title_page %}
+{% block content %}
+<div class="container">
+    <h1>Ваша Корзина</h1>
+        <table class="container">
+            <thead>
+            <tr>
+                <th>Изображение товара</th>
+                <th>Наименование</th>
+                <th>Количество</th>
+                <th>Удаление</th>
+                <th>Цена</th>
+                <th>Стоимость</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in cart %}
+                {% with product=item.product %}
+                    <tr>
+                        <td>
+                            <a href="{{ product.get_absolute_url }}">
+                                <img src="
+                                    {% if product.image %}
+                                        {{ product.image.url }}
+                                    {% else %}
+                                        {% static "img/no_image.png" %}
+                                    {% endif %}">
+                            </a>
+                        </td>
+                        <td>{{ product.name }}</td>
+                        <td>{{ item.quantity }}</td>
+                        <td><a href="{% url 'cart_remove' product.id%}">Удалить</a></td>
+                        <td class="num">{{ item.price }} Руб.</td>
+                        <td class="num">{{ item.total_price }} Руб.</td>
+                    </tr>
+                {% endwith %}
+            {% endfor %}
+            <tr class="total">
+                <td>ВСЕГО</td>
+                <td colspan="1"></td>
+                <td class="num">{{ cart.get_total_price }} Руб.</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="form"><br>
+            <ul class="Portfolio-nav wow fadeIn delay-02s">
+                <li><a href="{% url 'product_list' %}" class="submit">Продолжить выбор товара</a></li>
+                <li><a href="{% url 'order_create' %}" class="submit">Оформить заказ</a></li>
+            </ul>
+
+        </div>
+</div>
+{% endblock %}

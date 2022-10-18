@@ -1,0 +1,32 @@
+{% extends 'web/main.html' %}
+{% load static %}
+{% block title_page %}
+	<title>Ваша Корзина RASTEH.BY</title>
+{% endblock title_page %}
+{% block content %}
+<div class="container">
+    <h1>Оформление заказа</h1>
+    <div class="order-info">
+        <h2>Ваш заказ</h2>
+        <ul>
+            {% for item in cart %}
+                <li>
+                    {{ item.quantity }}x {{ item.product.name }}
+                    <span>{{ item.total_price }} Руб.</span>
+                </li>
+            {% endfor %}
+        </ul>
+        <h4>ВСЕГО: {{ cart.get_total_price }} Руб.</h4>
+    </div>
+    <section class="portfolioContainer wow fadeInUp delay-04s">
+        <form action="." method="post" class="form">
+            {{ form.as_p }}
+    </section>
+            <div class="form"><br>
+                <ul class="Portfolio-nav wow fadeIn delay-02s">
+                    <li><h4><input type="submit" value="Разместить заказ"></h4></li>
+                </ul>
+            {% csrf_token %}
+        </form>
+            </div>
+{% endblock %}
