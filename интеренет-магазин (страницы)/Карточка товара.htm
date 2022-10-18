@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class="csstransforms csstransforms3d csstransitions" lang="ru"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+	
+    <title>Товар</title>
+
+    
+
+	<link rel="shortcut icon" href="http://127.0.0.1:8000/static/img/favicon.ico">
+
+	<link href="%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0_files/css_002.css" rel="stylesheet" type="text/css">
+	<link href="%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0_files/css.css" rel="stylesheet" type="text/css">
+
+    <link href="%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0_files/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0_files/style.css" rel="stylesheet" type="text/css">
+	<link href="%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0_files/font-awesome.css" rel="stylesheet" type="text/css">
+	<link href="%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0_files/responsive.css" rel="stylesheet" type="text/css">
+	<link href="%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0_files/magnific-popup.css" rel="stylesheet" type="text/css">
+	<link href="%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0_files/animate.css" rel="stylesheet" type="text/css">
+
+	<script type="text/javascript" src="%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0_files/jquery.1.8.3.min.js"></script>
+	<script type="text/javascript" src="%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0_files/bootstrap.js"></script>
+	<script type="text/javascript" src="%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0_files/jquery-scrolltofixed.js"></script>
+	<script type="text/javascript" src="%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0_files/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0_files/jquery.isotope.js"></script>
+	<script type="text/javascript" src="%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0_files/wow.js"></script>
+	<script type="text/javascript" src="%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0_files/classie.js"></script>
+	<script type="text/javascript" src="%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0_files/magnific-popup.js"></script>
+	<script src="%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0_files/contactform.js"></script>
+</head>
+<body>
+	<nav class="main-nav-outer scroll-to-fixed-fixed" id="test" style="z-index: 1000; position: fixed; top: 0px; margin-left: 0px; width: 2379px; left: 0px;">
+		<!--main-nav-start-->
+		<div class="container">
+			<ul class="main-nav">
+				<li class="small-logo"><a href="#header"><img src="%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0_files/small-logo.png" alt=""></a></li>
+				<li><a href="http://127.0.0.1:8000/">Главная</a></li>
+				<li><a href="http://127.0.0.1:8000/%5E$">Каталог</a></li>
+
+				<li><a href="http://127.0.0.1:8000/delivery/">Доставка</a></li>
+				<li><a href="http://127.0.0.1:8000/contactfrm/">Оставить заявку</a></li>
+				<li><a href="http://127.0.0.1:8000/contact/">Контакты</a></li>
+			</ul>
+
+		</div>
+	</nav><div style="display: block; width: 2379px; height: 125px; float: none;"></div>
+	
+
+    <div class="container">
+        <h2><a href="http://127.0.0.1:8000/%5E(%3FPklei%5B-%5Cw%5D+)/$">Клеи</a></h2>
+        <figure class="col-lg-3 col-sm-10  text-left wow fadeInUp delay-02s animated" style="visibility: visible; animation-name: fadeInUp;">
+            <img src="%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0_files/303.2_10%D0%BA%D0%B3.jpg">
+        </figure>
+        <div class="container">
+            <div class="form">
+                <form action="/%5Ecart/%5Eadd/(%3FP12%5Cd+)/$" method="post">
+                    
+    <label for="id_quantity">Количество:</label>
+    
+      
+      <select name="quantity" id="id_quantity">
+  <option value="1" selected="selected">1</option>
+
+  <option value="2">2</option>
+
+  <option value="3">3</option>
+
+  <option value="4">4</option>
+
+  <option value="5">5</option>
+
+  <option value="6">6</option>
+
+  <option value="7">7</option>
+
+  <option value="8">8</option>
+
+  <option value="9">9</option>
+
+  <option value="10">10</option>
+
+  <option value="11">11</option>
+
+  <option value="12">12</option>
+
+  <option value="13">13</option>
+
+  <option value="14">14</option>
+
+  <option value="15">15</option>
+
+  <option value="16">16</option>
+
+  <option value="17">17</option>
+
+  <option value="18">18</option>
+
+  <option value="19">19</option>
+
+  <option value="20">20</option>
+
+</select>
+      
+      
+        <input type="hidden" name="update" value="False" id="id_update">
+      
+    
+  
+                    <input type="hidden" name="csrfmiddlewaretoken" value="xrv1djJEHbyyGnnDeZt3GtKKSsgVpFJhYRZaYaWZ7S4VcEytRxzLXp4nJyvBK9v5">
+                    <p3><h3><input type="submit" value="Добавить в корзину"></h3></p3><br>
+                </form>
+            </div>
+        </div>
+        <div class="portfolioContainer wow fadeInUp delay-04s isotope animated" style="visibility: visible; animation-name: fadeInUp; position: relative; overflow: hidden; height: 23px; width: 2265px;">
+            <h3 style="position: absolute; left: 0px; top: 0px; transform: translate3d(15px, 0px, 0px);" class="isotope-item">Цена: 110,00 Руб.</h3>
+        </div>
+            <h1>303.2 Kleiberit универсальный cтолярный клей для шпона, HPL, CPL, массива, D3/D4, 10 кг</h1>
+
+
+        <p>Индустриальный клей для водостойких соединений в соответствии с DIN EN 204, качество склеивания D3</p>
+
+<p> Область применения</p>
+
+<p>    Склеивание окон и дверей<br>    Склеивание по пласти HPL-плит<br>    Склеивание по пласти разделительных стенок и изготовление элементов<br>    Склеивание твердых и экзотических пород древесины, например, строительство лестниц, бруса<br>    Пригоден для склеивания шпона</p>
+
+<p>       Высокочастотное склеивание</p>
+
+<p> Преимущества</p>
+
+<p>    Как однокомпонентный клей – поставляется в готовом виде<br>    Как двухкомпонентный клей – удовлетворяет максимальным требованиям<br>    Пригоден для теплого и холодного склеивания<br>    Короткое время прессования</p>
+
+<p> Свойства клеевого соединения</p>
+
+<p>    КЛЕБИТ 303.2 как однокомпонентный клей по DIN EN 204 
+соответствует группе нагрузки D3 (см. протокол проведения испытаний № 
+555 27399 от 28.08.2003)<br>    Как двухкомпонентный клей после 
+добавления 5% отвердителя 303.5 соответствует группе нагрузки D4 (см. 
+протокол проведения испытаний № 505 27396/1 от 08.09.2003, институт Окна
+ в г. Розенхайм)<br>    КЛЕБИТ 303.2 испытан на соответствии WATT 91 
+(см. протокол проведения испытаний № 555 27399/2 от 15.09.2003, институт
+ Окна в г. Розенхайм)<br>    Высокая прочность сцепления также при склеивании твердых и экзотических пород древесины<br>    Клеевой шов (у однокомпонентного клея)– щадящий инструмент, бесцветный<br>    Клеевой шов (у двухкомпонентного клея)– щадящий инструмент, слегка желтоватый</p>
+
+<p>Свойства клея</p>
+
+<p>Основа:                                            ПВА - дисперсия</p>
+
+<p>Соотношение смеси                      Комп. А : Комп. В : 20: 1</p>
+
+<p>(вес или объем):                            (соответствует 5% добавления отвердителя)</p>
+
+<p>Плотность:                                      Комп. А : ок. 1,10 г/см3</p>
+
+<p>                                                          Комп. В : ок. 1,13 г/см3</p>
+
+<p>РН-значение:                                               ок. 3</p>
+
+<p>Цвет клея:                                       белый</p>
+
+<p>Цвет смеси:                                     белый<br>Консистенция:                               средневязкая<br>Вязкость при 20 град.С</p>
+
+<p>-Брукфильд  RVT Sp.6/20 Upm:              13.000 +/- 3.000 mPa.s<br>Жизнеспособность:                                    с отвердителем ок.  24 часов Время открытой выдержки</p>
+
+<p>при 20 град. С:                                            6-10 минут</p>
+
+<p>Точка беления:                                           + 5 град.С</p>
+
+<p>Физиологическое воздействие</p>
+
+<p>- клей:                        Не подлежит маркировке по нормам для рабочих сред Германии</p>
+
+<p>- отвердитель:         Подлежит маркировке по нормам для рабочих сред Германии.</p>
+
+<p>Защищать руки и глаза! Брызги сразу же смыть водой!</p>
+
+<p>(см. листок безопасности).<br>Методы нанесения</p>
+
+<p>    Кистью, шпателем или клеенаносящим валиком<br>    Клеенаносящими устройствами в рамных прессах и  в установках для сращивания на мини-шип<br>    Клеенаносящими приборами</p>
+
+<p>Клеенаносящие приборы должны быть изготовлены из высококачественной стали или синтетических материалов.<br>Переработка</p>
+
+<p>Склеиваемые материалы должны быть обеспылены, обезжирены и 
+акклиматизированы. Оптимальная температура переработки от +18 до +20 
+град. С, оптимальная влажность древесины – 8-10% при склеивании деталей 
+для последующего использования из внутри помещения, 10-14% при 
+производстве окон. Не перерабатывать при температуре ниже + 10 град С. 
+Обычно достаточно одностороннего нанесение клея. При склеивании 
+древесины твердых и экзотических пород рекомендуется двустороннее 
+нанесение клея.</p>
+
+<p>Расход клея:                                               </p>
+
+<p>100-130 г/м2 при приклеивании шпона</p>
+
+<p>150-200 г/м2 при склеивании массивной древесины</p>
+
+<p>Расход клея зависит от структуры поверхности и применяемых приборов для нанесения клея.</p>
+
+<p>Время открытой выдержки:       6-10 минут</p>
+
+<p>Время открытой выдержки зависит от количества нанесения, 
+впитываемости материала, влажности древесины и воздуха, а также 
+температуры помещения.</p>
+
+<p>Жизнеспособность:                                    ок. 24 часов</p>
+
+<p>Предписанное количество отвердителя вмешать в клей до хорошего 
+качества смеси. После истечения срока жизнеспособности остатки клея 
+могут быть переработаны как D3 клей или же в остатки клея для достижения
+ склеивания группы нагрузки D4 может быть добавлено соответствующее 
+количество отвердителя.</p>
+
+<p>Давление прессования:                 0,7 – 1 Н/мм2 при склеивании ламелей или слоистой древесины</p>
+
+<p>Время прессования:                        </p>
+
+<p>Склеивание фуг                                                      20 град.С от 15 мин.</p>
+
+<p>Склеивание фуг (предварительный подогрев)    50 град.С от  5 мин.</p>
+
+<p>Склеивание фуг                                                      80 град.С от  2 мин.</p>
+
+<p>Склеивание по пласти HPL-плит                         20 град.С 15-20 мин.</p>
+
+<p>Склеивание по пласти HPL-плит                         50 град.С ок. 5 мин.</p>
+
+<p>Склеивание по пласти HPL-плит                         80 град.С    1-2 мин.</p>
+
+<p>При использовании в качестве двухкомпонентного клея указанное время увеличивается примерно на 50%.</p>
+
+<p>Легкое вспенивание смеси не наносит вреда качеству склеивания и может
+ быть устранено путем размешивания. Окна и подобные рамные конструкции 
+после вспомогательного скрепления гвоздиками после прессования могут 
+быть сразу извлечены из пресса.</p>
+
+<p>В соответствии с  DIN/EN 204 окончательная прочность в соответствии с группами нагрузки  достигается через 7 дней.</p>
+
+<p>Древесина и древесные материалы являются натуральными веществами. На 
+основании различного состава содержащихся в древесине веществ (в 
+зависимости от места произрастания, предварительной обработки) в 
+отдельных случаях (например, бук, вишня, клен) может изменяться цвет 
+древесины.</p>
+
+<p>Кроме того,  при склеивании древесины, содержащей дубильные вещества 
+(например, дуб) и в случае контакта с железом (например, при 
+использовании не предназначенного приспособления для прессования) также 
+может произойти изменение цвета.<br>Очистка</p>
+
+<p>Очистка оборудования, клеенаносящих приборов и емкостей из-под клеевых материалов осуществляется водой.<br>Упаковка</p>
+
+<p>Пластмассовая емкость                                          10 кг нетто</p>
+
+<p>Пластмассовая емкость                                          28 кг нетто</p>
+
+<p>Пластмассовая бочка                                              130 кг нетто</p>
+
+<p>Пластмассовый контейнер (невозвратный)         1000 кг нетто</p>
+
+<p>Отвердитель 803.5:</p>
+
+<p>Картон с 12 жестяными бутылками                      по 0,5 кг нетто</p>
+
+<p>Картон с 12 жестяными бутылками                      по 0,7 кг нетто<br>Хранение</p>
+
+<p>Оба компонента при температуре 20 градусов С в оригинальной закрытой 
+упаковке хранятся  около 1 года. Клей морозоустойчив при транспортировке
+ до – 30 градусов С. Перед  переработкой клей оттаять до температуры 
+помещения и хорошо перемешать.</p>
+    </div>
+
+
+	<!--main-nav-end-->
+		<script type="text/javascript">
+		$(document).ready(function(e) {
+
+			$('#test').scrollToFixed();
+			$('.res-nav_click').click(function() {
+				$('.main-nav').slideToggle();
+				return false
+
+			});
+
+      $('.Portfolio-box').magnificPopup({
+        delegate: 'a',
+        type: 'image'
+      });
+
+		});
+	</script>
+
+	<script>
+		wow = new WOW({
+			animateClass: 'animated',
+			offset: 100
+		});
+		wow.init();
+	</script>
+
+
+	<script type="text/javascript">
+		$(window).load(function() {
+
+			$('.main-nav li a, .servicelink').bind('click', function(event) {
+				var $anchor = $(this);
+
+				$('html, body').stop().animate({
+					scrollTop: $($anchor.attr('href')).offset().top - 102
+				}, 1500, 'easeInOutExpo');
+				/*
+				if you don't want to use the easing effects:
+				$('html, body').stop().animate({
+					scrollTop: $($anchor.attr('href')).offset().top
+				}, 1000);
+				*/
+				if ($(window).width() < 768) {
+					$('.main-nav').hide();
+				}
+				event.preventDefault();
+			});
+		})
+	</script>
+
+	<script type="text/javascript">
+		$(window).load(function() {
+
+
+			var $container = $('.portfolioContainer'),
+				$body = $('body'),
+				colW = 375,
+				columns = null;
+
+
+			$container.isotope({
+				// disable window resizing
+				resizable: true,
+				masonry: {
+					columnWidth: colW
+				}
+			});
+
+			$(window).smartresize(function() {
+				// check if columns has changed
+				var currentColumns = Math.floor(($body.width() - 30) / colW);
+				if (currentColumns !== columns) {
+					// set new column count
+					columns = currentColumns;
+					// apply width to container manually, then trigger relayout
+					$container.width(columns * colW)
+						.isotope('reLayout');
+				}
+
+			}).smartresize(); // trigger resize to set container width
+			$('.portfolioFilter a').click(function() {
+				$('.portfolioFilter .current').removeClass('current');
+				$(this).addClass('current');
+
+				var selector = $(this).attr('data-filter');
+				$container.isotope({
+
+					filter: selector,
+				});
+				return false;
+			});
+
+		});
+	</script>
+
+</body></html>
